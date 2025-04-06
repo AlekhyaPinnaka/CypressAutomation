@@ -1,5 +1,7 @@
 const { defineConfig } = require('cypress');
 const cucumber = require('cypress-cucumber-preprocessor').default
+const mochawesomeMerge = require('mochawesome-merge');
+const mochawesomeReportGenerator = require('mochawesome-report-generator');
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',

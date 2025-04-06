@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-06T02:56:41.578Z",
+    "end": "2025-04-06T02:56:46.974Z",
+    "duration": 5396,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "537f9681-8dbc-481e-9c5d-5b0e8fc9ecfc",
+      "title": "",
+      "fullFile": "cypress/e2e/specFiles/Registration.spec.cy.js",
+      "file": "cypress/e2e/specFiles/Registration.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cde85397-ec5d-44b7-8f30-722aaba5b657",
+          "title": "Registration spec",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify title of the Page",
+              "fullTitle": "Registration spec Verify title of the Page",
+              "timedOut": null,
+              "duration": 690,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/specFiles/Registration.spec.cy.js\"\n}",
+              "code": "cy.get('span:contains(\"Home\")').should('be.visible');",
+              "err": {},
+              "uuid": "58ac2a0c-c6b5-41c3-b84d-b63b402b4715",
+              "parentUUID": "cde85397-ec5d-44b7-8f30-722aaba5b657",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Registration Page",
+              "fullTitle": "Registration spec Registration Page",
+              "timedOut": null,
+              "duration": 3704,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/specFiles/Registration.spec.cy.js\"\n}",
+              "code": "reg.clickOnAccountPage();\nreg.clickOnContinueButton();\nreg.verifyTitleofRegisterAccountPage();\nreg.enterFirstName(signUpData.firstName);\ncy.log(\"Entered the First Name\");\nreg.enterLastName(signUpData.lastName);\ncy.log(\"Entered the Last Name\");\nreg.enterEmail(signUpData.email);\ncy.log(\"Entered the Email address\");\nreg.enterMobileNumber(signUpData.mobileNumber);\ncy.log(\"Entered the Mobile Number\");\nreg.enterPassword(signUpData.password);\ncy.log(\"Entered the Password\");\nreg.enterConfirmPassword(signUpData.confirmPassword);\ncy.log(\"Entered the Confirmed Password\");\nreg.clickOnCheckBox();\nreg.clickOnContinueButtonOnRegisterPage();\ncy.url({\n  timeout: 10000\n}).then(function (url) {\n  if (url === 'https://ecommerce-playground.lambdatest.io/index.php?route=account/success') {\n    cy.log(\"Account has been created Successfully\");\n    reg.verifyAccountCreation();\n  } else {\n    reg.verifyRegisteredUser().then(function ($warning) {\n      if ($warning.length === 0) {\n        reg.verifyTitleofAccountCreation();\n      } else {\n        cy.log('User is already registered. Skipping account creation title check.');\n      }\n    });\n  }\n});",
+              "err": {},
+              "uuid": "09912e1d-d57b-4dfd-8a04-bd403af87757",
+              "parentUUID": "cde85397-ec5d-44b7-8f30-722aaba5b657",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "58ac2a0c-c6b5-41c3-b84d-b63b402b4715",
+            "09912e1d-d57b-4dfd-8a04-bd403af87757"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4394,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "embeddedScreenshots": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
