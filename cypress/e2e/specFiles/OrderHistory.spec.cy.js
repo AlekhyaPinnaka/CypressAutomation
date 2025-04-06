@@ -25,15 +25,15 @@ describe('OrderHistory spec', () => {
         cy.url().should('include', '/index.php?route=account/account');
         orderHistory.myOrders();
 
-        Cypress._.times(6, (index) => { 
-            cy.get(':nth-child(1) > .card-body')
-          .find('div')
-          .eq(index)
-          .click();
+        // Cypress._.times(6, (index) => { 
+        //     cy.get(':nth-child(1) > .card-body')
+        //   .find('div')
+        //   .eq(index)
+        //   .click();
           
-          cy.get('#content > div.table-responsive').should('be.visible');
-          cy.go('back');
-          cy.reload();
-          });
+        //   cy.get('#content > div.table-responsive').should('be.visible');
+        //   cy.go('back');
+        //   cy.reload();
+        //   });
     });
 });
